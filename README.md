@@ -13,4 +13,4 @@ Use **W**, **A**, **S**, **D** or **arrow keys** to move the ship, **SPACE** to 
 Added many functionalities to the game including play/pause, bonus enemy ship, waves of enemies, scores, etc.
 
 ### Features to Add
-Bases in the game, high score, player profiles and boss fights(maybe if got the time)
+Bases in the game, sounds, high score, player profiles and boss fights(maybe if got the time)
