@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space-Invaders</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="game-body">
+    <div class="container">
+        <h1 class="title">Space-Invaders</h1>
+        <h4 class="description">
+            Move the ship using arrow keys or W, A, S, D and fire using Space key.
+        </h4>
+        <h5 class="description">Use P to pause/resume the game.</h5>
+        <div class="canvas-container">
+            <canvas id="canvas" class="canvas"></canvas>
+            <button class="play-again-button" id="play-again">Play Again</button>
+        </div>
+        <div class="hud">
+            <div class="hud-inner">
+                <hr id="rule">
+                <div class="score-lives">
+                    <h4 class="score" id="score">Score: 0</h4>
+                    <!-- <h4 id="score" class="hud score">0</h4> -->
+                    <!-- <h4 class="hud lives">Lives</h4> -->
+                    <div class="lives-container" id="lives">
+                        <img src="img/player.png" alt="life 1" id="life-1" width="25" height="24" />
+                        <img src="img/player.png" alt="life 2" id="life-2" width="25" height="24" />
+                        <img src="img/player.png" alt="life 3" id="life-3" width="25" height="24" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg bg-infinite-top"></div>
+    <div class="bg bg-infinite-bottom opacity-less"></div>
+    <script type="module" src="game.js"></script>
+    <!-- <script src="test.js"></script> -->
+</body>
+
+</html>

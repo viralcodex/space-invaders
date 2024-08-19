@@ -1,0 +1,212 @@
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.game-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.container {
+  z-index: 1;
+  /* width: inherit; */
+  height: inherit;
+}
+
+.title {
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgb(118, 237, 0);
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+}
+
+.description {
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+  color: rgb(118, 237, 0);
+  padding: 0;
+  margin: 0;
+}
+
+.hud {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.score-lives {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.score {
+  font-weight: bolder;
+  width: 100%;
+  font-size: 16px;
+  color: rgb(118, 237, 0);
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: fit-content;
+}
+
+.lives {
+  text-align: right;
+}
+
+.lives-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.canvas {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: inherit;
+  /* background-color: rgb(0, 48, 90); */
+}
+
+.play-again-button {
+  background-color: rgb(118, 237, 0);
+  display: none;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  font-weight: 800;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.opacity-less {
+  mix-blend-mode: screen;
+  /* z-index: 2; */
+  opacity: .5;
+}
+
+.bg-infinite-top {
+  animation: animatedBackground 250s linear infinite;
+  background: url('img/space_overlay.png');
+}
+
+.bg-infinite-bottom {
+  animation: animatedBackground 500s linear infinite;
+  background: url('img/space.png');
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: repeat;
+  /* 
+    top: 0;
+    left: 0;
+    background-position: 0 0; 
+    */
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 10000px;
+  }
+}
+
+
+/* Extra Small Devices (Phones, <576px) */
+@media (min-width:450px) and (max-width: 575.98px) {
+  .canvas {
+    height: 250px;
+  }
+
+  .hud {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .hud-inner {
+    width: 80%;
+  }
+}
+
+/* Small Devices (Tablets, ≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .canvas {
+    height: 450px;
+  }
+
+  .hud {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .hud-inner {
+    width: 80%;
+  }
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 768px) and (max-width: 1919.98px) {
+  .canvas {
+    height: 450px;
+  }
+
+  .hud {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .hud-inner {
+    width: 80%;
+  }
+}
+
+@media (min-width : 1920px) and (max-width: 2400px) {
+  .canvas {
+    height: 700px;
+  }
+
+}
+
+@media (min-width : 2400px) {
+  .canvas {
+    height: 700px;
+  }
+
+}
